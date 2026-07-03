@@ -1,236 +1,473 @@
 {
-  "meta": {
-    "theme": "elegant"
-  },
   "basics": {
-    "name": "Thomas Davis",
-    "label": "Web Developer",
-    "image": "https://avatars0.githubusercontent.com/u/416209?s=460&u=38f220a2c9c658141804f881c334c594eb1642ac&v=4",
-    "summary": "I'm a full stack web developer who can build apps from the ground up. I've worked mostly at startups so I am used to wearing many hats. I am a very product focussed developer who priotizes user feedback first and foremost. I'm generally very flexible when investigating new roles. ",
-    "website": "https://lordajax.com",
-    "email": "thomasalwyndavis@gmail.com",
-    "location": {
-      "city": "Melbourne",
-      "countryCode": "AU"
-    },
+    "name": "Brendan Carpio",
+    "label": "Software Craftsman: No on-call alerts is what a healthy relationship sounds like | Linux, containers, CL",
+    "image": "",
+    "email": "bfcarpio@gmail.com",
+    "phone": "+1 517-505-0397",
+    "url": "http://bfcarp.io",
+    "summary": "Senior Software Engineer and software craftsman at Microsoft: an SRE-minded, Linux-native polyglot who led large-scale platform migrations, became the team's Kubernetes SME, and architected caching strategies that slashed calls to high-cost backend services by 90%, yielding ~$6M/year in savings. I build systems that self-heal and scale gracefully so people can rest easy.",
     "profiles": [
       {
-        "username": "ajaxdavis",
-        "url": "https://twitter.com/ajaxdavis",
-        "network": "twitter"
+        "network": "GitHub",
+        "username": "bfcarpio",
+        "url": "https://github.com/bfcarpio"
       },
       {
-        "url": "https://github.com/thomasdavis",
-        "username": "thomasdavis",
-        "network": "github"
+        "network": "GitLab",
+        "username": "bfcarpio",
+        "url": "https://gitlab.com/bfcarpio"
+      },
+      {
+        "network": "Sourcehut",
+        "username": "bfcarpio",
+        "url": "https://sr.ht/bfcarpio"
+      },
+      {
+        "network": "Codeberg",
+        "username": "bfcarpio",
+        "url": "https://codeberg.org/bfcarpio/"
       }
-    ]
+    ],
+    "location": {
+      "region": "WA",
+      "city": "Seattle",
+      "postalCode": "98122",
+      "countryCode": "US"
+    }
   },
-  "education": [
+  "work": [
     {
-      "endDate": "2009-12-12",
-      "startDate": "2008-02-12",
-      "area": "Software Engineering (incomplete)",
-      "studyType": "Bachelors",
-      "institution": "The University of Queensland"
+      "name": "Microsoft",
+      "location": "Greater Seattle Area",
+      "position": "Senior Software Engineer",
+      "url": "https://microsoft.com",
+      "startDate": "2026-03-01",
+      "summary": "Technical lead for Azure Maps routing migration, caching architecture, and platform scaling across distributed scheduling services.",
+      "highlights": [
+        "Drove >$6M/year in cost savings and reduced route API consumption by 97% by designing and implementing a distributed Redis + application-layer caching system.",
+        "Led end-to-end migration of spatial data providers, increasing performance capacity by 100x while maintaining service health across 7+ staged rollouts.",
+        "Iterated on distributed cache and spatial data provider code to reduce cache memory by 50%, pod memory by 82%, and increase throughput by 100% — eliminating OOM errors and lowering COGS.",
+        "Solved QPS bottlenecks and throughput constraints by designing distributed rate-limiting and throttling systems across multi-pod AKS deployments.",
+        "Built end-to-end observability for Redis health, cache efficiency, and Azure Maps usage using Grafana and Kusto/ADX.",
+        "Prototyped LLM skills to automatically generate Grafana charts from internal Azure resource metrics and code repo logs.",
+        "Led cross-team alignment across Maps, URS, SOA, Redis, and platform teams to unblock migration and scaling challenges"
+      ]
+    },
+    {
+      "name": "Microsoft",
+      "location": "Greater Seattle Area",
+      "position": "Software Engineer II",
+      "url": "https://microsoft.com",
+      "startDate": "2021-09-01",
+      "endDate": "2026-03-01",
+      "summary": "Sole Kubernetes engineer and DevOps SME responsible for containerization, deployment, and platform delivery across scheduling services.",
+      "highlights": [
+        "Served as team Kubernetes SME — maintained Helm charts, designed low/no-touch cluster scaling for stateful applications, and architected a multi-cluster orchestration service for dynamic K8s deployment with per-customer configuration.",
+        "Improved AKS deployment reliability by building rollback diagnostic workflows that cut time-to-root-cause for failed deployments.",
+        "Designed and automated a CVE patching pipeline that kept containers current without manual intervention, reducing security toil across all deployments.",
+        "Drove upstream platform changes that improved performance and reliability for multiple dependent teams.",
+        "Promoted Docker best practices across the team through brown bags on container internals and standardized hygiene guidelines.",
+        "Presented intermediate Kubernetes concepts — auto-healing, monitoring, and scaling — to an audience of 100+ engineers."
+      ]
+    },
+    {
+      "name": "Microsoft",
+      "location": "Greater Seattle Area",
+      "position": "Software Engineer",
+      "url": "https://microsoft.com",
+      "startDate": "2020-08-01",
+      "endDate": "2021-09-01",
+      "summary": "Built deployment infrastructure and IoT container systems for Connected Store / Connected Spaces — a computer vision platform enabling retail businesses to track customer behavior and surface real-time worker alerts.",
+      "highlights": [
+        "Designed the majority of K8s infrastructure for the product — Helm charts, deployment scripts, sidecars, and tooling evaluation — as one of a small group of Kubernetes-focused engineers on the team.",
+        "Built Bash-based deployment automation from scratch for Azure Stack Edge, replacing manual processes across ~30 edge devices.",
+        "Took full ownership of the Python-based IoT container, maintaining and evolving core functionality for the computer vision pipeline.",
+        "Assisted other teams with Docker container design to ensure cross-service compatibility and runtime hygiene.",
+        "Established the Kubernetes and Linux expertise that became the foundation for later platform engineering work across the team"
+      ]
+    },
+    {
+      "name": "Humana",
+      "location": "Remote",
+      "position": "DevOps + Microservice + Cloud Infrastrucure Software Development Extended Intern",
+      "url": "https://www.humana.com/",
+      "startDate": "2019-08-01",
+      "endDate": "2019-11-01",
+      "summary": "",
+      "highlights": [
+        "Developed a microservice using Node.js and Azure DevOps APIs to automate the download and upload of certificates between Google Cloud Platform's App Engine and Azure DevOps pipelines, reducing deployment time and manual intervention for CI/CD setup.",
+        "Utilized the Serverless framework to package and deploy functions in a platform-agnostic manner, ensuring consistent tooling and ease of use regardless of cloud provider.",
+        "Worked with Node.js, Azure DevOps, and Google Cloud Platform App Engine."
+      ]
+    },
+    {
+      "name": "Humana",
+      "location": "Louisville, Kentucky Area",
+      "position": "Full-Stack + DevOps Software Development Intern",
+      "url": "https://www.humana.com/",
+      "startDate": "2019-05-01",
+      "endDate": "2019-08-01",
+      "summary": "",
+      "highlights": [
+        "Developed a Project Estimate Web App that replaced mass emailed Excel spreadsheets, reducing errors and completion time by 50%. Connected to a Flask API hosted on Google Cloud Platform, the app provided a centralized infrastructure for project cost calculations with version tracking. I was primarily responsible for vue.js front-end development and configuring Azure Dev Ops pipelines.",
+        "Collaborated with an Agile: Scrum team, splitting focus between front-end and back-end halves. Ensured routine communication was maintained between the two halves to meet Service Level Agreements.",
+        "Organized and ran a company Hackathon, showcasing leadership and organizational skills. Coordinated logistics such as food, judges, room, and prompts."
+      ]
+    },
+    {
+      "name": "Union Pacific Railroad",
+      "location": "Greater Omaha Area",
+      "position": "Machine Learning + Java/Python Microservice Software Development Intern",
+      "url": "https://www.up.com/",
+      "startDate": "2018-05-01",
+      "endDate": "2018-08-01",
+      "summary": "",
+      "highlights": [
+        "Developed two APIs, one in Java with Spring Boot and one in Python with Django and spaCy, to streamline help ticket processing and routing.",
+        "Worked closely with a partner to receive daily feedback and ensure timely completion of projects.",
+        "Successfully implemented an API \"glue\" using Java to connect Python, Solr, and ColdFusion front-end, significantly improving user experience by grouping, classifying, and redirecting help tickets using machine learning algorithms."
+      ]
+    },
+    {
+      "name": "Michigan State University",
+      "location": "Lansing, Michigan Area",
+      "position": "Full-stack Java Spring Software Development Intern",
+      "url": "https://msu.edu",
+      "startDate": "2017-02-01",
+      "endDate": "2019-05-01",
+      "summary": "",
+      "highlights": [
+        "Collaborated with a development team to create and maintain full-stack web applications using Java with Spring Boot, jQuery, and Hibernate, ensuring timely completion of assigned \"stories\".",
+        "Contributed to the development of the ProSAM Administrative Web Application, allowing for no-code editing of financial aid calculation variables with input validation and surfacing errors during batch processing on a user-friendly dashboard."
+      ]
     }
   ],
-  "references": [
+  "education": [
     {
-      "reference": "Thomas was hired as a lead developer and, upon the leaving of our co-founder took over as CTO of Earbits. Thomas is, hands down, one of those A Players you hear of companies dying to hire. He is incredibly smart, not just at code but about everything from classical music to Chinese language and culture. Thomas is great to work with and, as a well established contributor to open source projects and several successful ventures, commands the respect of engineers at all levels. I would suggest doing anything you can to have him on your team.",
-      "name": "Joey Flores, Co-founder and CEO of Earbits, Inc."
-    },
-    {
-      "reference": "I've had the great pleasure of working with Thomas for the past three years at Earbits, and on a few side projects. Two years ago our CTO left on a moment's notice, Thomas saved our company by quickly stepping up to fill this role. He has been with our company through thick and thin and made serious personal sacrifices in order to help the company during tough times. He is a phenomenal hacker and a true team player. Highly recommended!",
-      "name": "Yotam Rosenbaum, SVP of Operations, Earbits, Inc."
-    },
-    {
-      "reference": "Thomas is an extremely talented engineer with a very broad range of skills and experience. From being a thought leader in the front-end community via backbonetutorials.com and cdnjs.com, to designing and implementing the API for cdnjs.com, working with Thomas has been fantastic learning experience. Thomas is truly a full stack develop, and his work output is incredible. If there is any opportunity to work with Thomas, I take it. He is the definition of an A player.",
-      "name": "Ryan Kirkman, Senior Software Engineer at Nerdwallet"
-    },
-    {
-      "reference": "On Thomas Davis... Hire this guy. Do not be fooled. Incredibly capable and fast. Plays well with others. Unbelievable at front-end work end programming but that is just the start. Visionary. Hire him before I do.",
-      "name": "Greg Davis"
+      "institution": "Michigan State University",
+      "url": "https://msu.edu",
+      "area": "Computer Science",
+      "studyType": "Bachelors",
+      "startDate": "2016-09-01",
+      "endDate": "2020-05-01",
+      "score": "",
+      "courses": []
     }
   ],
   "skills": [
     {
-      "keywords": [
-        "HTML / JSX",
-        "SCSS / CSS / BEM / Styled Components",
-        "Javascript / Typescript",
-        "React / Next",
-        "Redux / Apollo"
-      ],
-      "level": "Senior",
-      "name": "Frontend"
+      "name": "Redis",
+      "level": "",
+      "keywords": []
     },
     {
-      "keywords": ["Node", "Ruby", "Python", "Postgres", "Redis", "Serverless"],
-      "level": "Senior",
-      "name": "Backend"
+      "name": "SOLID Design Principles",
+      "level": "",
+      "keywords": []
     },
     {
-      "keywords": ["AWS", "G Cloud", "Heroku", "Caching"],
-      "level": "Senior",
-      "name": "Devops"
+      "name": "Performance Tuning",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Application Architecture",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Quality Management",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "AI Pair Programming / AI-Assisted Programming",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Cross-team Collaboration",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Cloud Infrastructure",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "System Architecture",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Kubernetes",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Continuous Integration and Continuous Delivery (CI/CD)",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Linux",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "CICD",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Serverless Framework",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Communication",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Bash",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Azure Kubernetes Service (AKS)",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "TDD",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Pipelines",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Machine Learning",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Continuous Integration",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Front-end Development",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Analytical Skills",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Web Design",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Agile Methodologies",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Agile Testing",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Test Automation",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Continuous Delivery",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Agile Environment",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Git",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Python",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Vue.js",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "GIT",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Open Source Software",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Operating Systems",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Django",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Flask",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Microsoft Azure",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "MySQL",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Docker",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Teamwork",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Leadership",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Conflict Resolution",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Microservices",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Full-Stack Development",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Functional Programming",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Elixir",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Parallel Programming",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Single Page Applications",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "API Development",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Agile Application Development",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Agile Web Development",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Build Automation",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "DevOps",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Back-End Web Development",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Go (Programming Language)",
+      "level": "",
+      "keywords": []
     }
   ],
-  "awards": [
+  "languages": [
     {
-      "title": "Defender of the Internet",
-      "awarder": "Fight For The Future"
+      "language": "English",
+      "fluency": "Native or bilingual proficiency"
     }
   ],
-  "work": [
+  "interests": [],
+  "references": [],
+  "projects": [
     {
-      "summary": "Tokenized is a Bitcoin wallet for issuing, managing and trading digital tokens. I built out the front end which was packaged as an electron app. It was a difficult frontend to build because we store the users keys locally and used them to sign transactions and contracts.",
-      "website": "https://tokenized.com/",
-      "name": "Tokenized",
-      "location": "Melbourne",
-      "position": "Senior Javascript Developer",
-      "startDate": "2020-05-05",
-      "highlights": ["React", "Redux", "SCSS", "Product"]
+      "name": "Michigan State Ballroom Dance Team Website",
+      "description": "As a team member of the Ballroom Dance Team, I noticed that our website was looking a bit outdated. I took it upon myself to design a new one that could be easily managed by none tech-savvy people and which would be better suited for the following years.   Starting completely from scratch, I've been building the website with HTML5, CSS3, and Bootstrap 3. After completing the base, data from the old website was migrated and reformatted into a more presentable format.",
+      "highlights": [],
+      "startDate": "2016-11-01",
+      "endDate": "2020-05-01",
+      "url": "https://gitlab.com/bfcarpio/MSUBDT-Website"
     },
     {
-      "summary": "Blockbid is an Australian crypto currency exchange. I started off on the frontend but eventually became lead tech and worked on every moving piece of the exchange. I really enjoyed working with liquidity providers and connecting their platforms to help us achieve liquid markets.",
-      "website": "https://platform.blockbid.io",
-      "name": "Blockbid",
-      "location": "Melbourne",
-      "position": "Senior Javascript Developer",
-      "startDate": "2018-03-01",
-      "endDate": "2020-01-01",
-      "highlights": [
-        "React, Apollo, Styled Components",
-        "Node.js / Rails",
-        "Docker / Heroku / GCP",
-        "Used Figma for design and UX work",
-        "Optimizing markets with tens of millions of rows using SQL."
-      ]
+      "name": "exNoops: Elixir API wrapper for Github's Noops",
+      "description": "*simple API wrapper for Github’s Noops (read: toy APIs). Developers can quickly and easily import this package; use idiomatic function calls to query the API, and get back native Elixir objects with minimal processing. *100% native Elixir, minimal dependencies, TDD w/ automated pipelines to compile, test, and deploy. *Fully documented with accurate example usage *My first released Elixir project",
+      "highlights": [],
+      "startDate": "2019-06-01",
+      "endDate": "2019-07-01",
+      "url": "https://hex.pm/packages/exnoops"
     },
     {
-      "highlights": [
-        "Worked with Postgres, Redis and Dynamodb for storage.",
-        "Hosted on a mixture of Heroku Apps and EC2 servers.",
-        "Caching by Fastly and Cloudflare",
-        "Hybrid app supported on all platforms"
-      ],
-      "summary": "Built a very large and complex React / Redux application. It works on all platforms and has IOS/Android builds due to it being a PWA. (wrapped it in React Native though only implementing a WebView)",
-      "website": "https://listium.com",
-      "pinned": true,
-      "name": "Listium",
-      "position": "Developer",
-      "startDate": "2016-01-01",
-      "endDate": "2018-01-01"
-    },
-    {
-      "highlights": [
-        "Millions of sites use the CDN in production",
-        "Larger market share than Yahoo's, Microsoft's and Google's javascript content distribution networks",
-        "We serve hundreds of billions request a month",
-        "Contains over 3000 popular Javascript libraries",
-        "Millions of developers visit the site per year"
-      ],
-      "pinned": true,
-      "summary": "Following Google's CDN for jQuery, we decided to start a CDN for the less popular Javascript frameworks. The CDN is community moderated and open source on GitHub. We secured a partnership with Cloudflare who now supports the infrastructure.",
-      "website": "http://www.cdnjs.com",
-      "name": "Cdnjs",
-      "position": "Co-Founder",
-      "startDate": "2011-01-08"
-    },
-    {
-      "highlights": [
-        "Developed new tools for contacting congress",
-        "Brainstormed campaign ideas to raise maximum awareness about issues",
-        "Lots of social networking integration"
-      ],
-      "summary": "Hired to take EFF's campaigning to the next level by building an action centre in Ruby on Rails. The action centre is built around some large open source tools that lower the barrier to entry when contacting congress.",
-      "website": "http://www.eff.org",
-      "name": "Electronic Frontier Foundation",
-      "position": "Developer",
-      "startDate": "2014-04-01",
-      "endDate": "2016-01-01"
-    },
-    {
-      "highlights": [
-        "Managed a small team of developers and designers",
-        "Built the entire frontend application with Backbone.js",
-        "Transferred all of the infrastructure from Heroku to AWS"
-      ],
-      "summary": "Started off as a front end developer but took on the role of CTO in early 2013. The application frontend is built with Javascript and organized as a single page application that talks to a collection of Rails web servers which are connected to MongoDB.",
-      "website": "http://www.earbits.com",
-      "name": "Earbits",
-      "position": "CTO",
-      "endDate": "2015-01-09",
-      "startDate": "2013-03-08"
-    },
-    {
-      "highlights": ["This resume is built with JSON Resume", "Over 3000 stars on Github", "Community developed themes", "Tens of thousands of users"],
-      "summary": "JSON Resume is a community driven open source initiative to create a JSON based standard for resumes. There is no reason why there can't be a common standard for writing a resume that can be extended with an ecosystem of open source tools.",
-      "website": "http://jsonresume.org",
-      "pinned": true,
-      "name": "JSON Resume",
-      "position": "Founder",
-      "startDate": "2014-04-01"
-    },
-    {
-      "highlights": [
-        "Generated  37,000,000 banner views",
-        "100, 000 phone calls to congress",
-        "500, 000 emails",
-        "250, 000 signatures"
-      ],
-      "summary": "Worked on many politically charged campaigns against mass surveillance. Not only technically challenging work but also a lot of networking and getting my hands dirty with politics.    Our biggest project was \"TheDayWeFightBack\"..",
-      "website": "http://www.taskforce.is",
-      "name": "Taskforce.is",
-      "position": "Developer",
-      "startDate": "2013-06-01",
-      "endDate": "2016-01-01"
-    },
-    {
-      "highlights": [
-        "The site and blog combined have managed to receive over 200,000 visitors in 2014."
-      ],
-      "summary": "An international directory of civilian drone / UAV operators for hire. Services include aerial photography, aerial video, mapping, surveying, precision agriculture, real estate photography, remote inspections and infrared imaging. Our plan is to be the place to go when looking for UAV/Drone services. The website is built in Backbone.js and API is built with Node.js and Postgres. ",
-      "website": "http://www.dronehire.org",
-      "name": "Drone Hire",
-      "position": "Co-Founder",
-      "startDate": "2013-01-01"
-    },
-    {
-      "highlights": [
-        "Over two million unique visitors a year",
-        "25,000+ ebook downloads",
-        "300,000+ Youtube views"
-      ],
-      "summary": "I write tutorials and blog post regarding the popular Javascript framework Backbone.js. The tutorials cover a range of topics regarding front end development aimed at beginners, experts and anyone in between.",
-      "website": "http://backbonetutorials.com",
-      "name": "BackboneTutorials.com",
-      "position": "Founder",
-      "startDate": "2011-01-01",
-      "endDate": "2014-01-01"
-    },
-    {
-      "summary": "Ephox is a worldwide company who is heavily involved with the development of TinyMce and enterprise editors. My primary role included building front-end widgets and applications. Worked on a major product using Backbone.js as a base. Heavily involved in UI/UX design and wire-framing. Also spend a lot of time designing API specifications and documentation.",
-      "website": "http://ephox.com",
-      "name": "Ephox",
-      "position": "Front-end Developer",
-      "endDate": "2012-06-01",
-      "startDate": "2011-01-01"
-    }
-  ],
-  "interests": [
-    {
-      "name": "Gardening"
-    },
-    {
-      "name": "Music / Jamming"
-    },
-    {
-      "name": "Reading / Writing"
-    },
-    {
-      "name": "Open Source"
+      "name": "muFind: 2019 Humanathon Winner",
+      "description": "*Ionic Framework, Golang, MongoDB, Node.JS, Google Cloud Platform *Full stack, cloud based, CSR application that helps users locate a desk or room on a floor plan. Humana makes it easy to locate what floor a conference room or person's desk is located. However, once you're there it's common to just walk around the floor looking for the room.  *Web interface and native mobile apps allows a Google Maps like experience. Searching for a location shows a pin on a floor plan map and gently zooms in.",
+      "highlights": [],
+      "startDate": "2019-07-01",
+      "url": "https://github.com/bfcarpio/2019-Humanathon-Back"
     }
   ]
 }
