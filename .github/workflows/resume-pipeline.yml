@@ -1,9 +1,11 @@
-name: Validate Resume
+name: Resume Pipeline
 
 on:
   push:
     paths:
       - resume.json
+    tags:
+      - 'v*'
   pull_request:
     paths:
       - resume.json
@@ -46,4 +48,18 @@ jobs:
           name: rendercv-yaml
           path: rendercv.yaml
           if-no-files-found: error
-          retention-days: 30
+          retention-days: 7
+
+      - name: Create Release Package
+        if: startsWith(github.ref, 'refs/tags/')
+        run: |
+          zip -j resume-package-${{ github.ref_name }}.zip resume.json rendercv.yaml
+
+      - name: Upload Release Artifact
+        if: startsWith(github.ref, 'refs/tags/')
+        uses: actions/upload-artifact@v4
+        with:
+          name: resume-package-${{ github.ref_name }}
+          path: resume-package-${{ github.ref_name }}.zip
+          if-no-files-found: error
+          retention-days: 180
