@@ -1,3 +1,7 @@
+[tasks.validate]
+description = "Validate resume.json"
+run = "scripts/validate.sh"
+
 [tasks.clean]
 description = "Clean generated files"
 run = "scripts/clean.sh"
