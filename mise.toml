@@ -13,6 +13,9 @@ run = "scripts/check.sh"
 [tasks.fix]
 description = "Static fix files"
 run = "scripts/fix.sh"
+[tasks.update-gist]
+description = "Update resume.json gist"
+run = "scripts/update-gist.sh"
 
 [tools]
 biome = "latest"

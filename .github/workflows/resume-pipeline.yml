@@ -18,11 +18,9 @@ jobs:
         run: bash scripts/validate.sh
 
       - name: Update Resume Gist
-        uses: exuanbo/actions-deploy-gist@v1
-        with:
-          token: ${{ secrets.TOKEN }}
-          gist_id: 941db0112258c22d1d1a371ba0eb72a6
-          file_path: resume.json
+        env:
+          GH_TOKEN: ${{ secrets.TOKEN }}
+        run: bash scripts/update-gist.sh
 
       - name: Setup Python
         uses: actions/setup-python@v5
