@@ -9,6 +9,12 @@ if [ ! -f "$INPUT" ]; then
   exit 1
 fi
 
+if ! command -v uvx >/dev/null 2>&1
+then
+    echo "uvx could not be found"
+    exit 1
+fi
+
 echo "Converting $INPUT → $OUTPUT"
 uvx jsonresume-to-rendercv -- "$INPUT" "$OUTPUT"
 echo "✅ Generated $OUTPUT"
