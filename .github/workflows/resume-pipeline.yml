@@ -4,11 +4,6 @@ on:
   push:
     paths:
       - resume.json
-    tags:
-      - 'v*'
-  pull_request:
-    paths:
-      - resume.json
 
 jobs:
   validate:
