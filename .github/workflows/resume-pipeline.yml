@@ -17,7 +17,17 @@ jobs:
       - name: Validate resume.json
         run: bash scripts/validate.sh
 
+  post-validate:
+    name: Gist & RenderCV YAML
+    runs-on: ubuntu-latest
+    needs: validate
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
       - name: Update Resume Gist
+        if: startsWith(github.ref, 'refs/tags/')
         env:
           GH_TOKEN: ${{ secrets.TOKEN }}
         run: bash scripts/update-gist.sh
@@ -43,13 +53,119 @@ jobs:
           if-no-files-found: error
           retention-days: 7
 
-      - name: Create Release Package
-        if: startsWith(github.ref, 'refs/tags/')
+  build-jsonresume-pdfs:
+    name: Build JSON Resume PDFs
+    runs-on: ubuntu-latest
+    needs: validate
+    strategy:
+      matrix:
+        theme:
+          - flat
+          - developer-mono
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Build PDF (${{ matrix.theme }})
+        run: bash scripts/build-jsonresume-pdf.sh resume.json "resume-${{ matrix.theme }}.pdf" "${{ matrix.theme }}"
+
+      - name: Upload PDF
+        uses: actions/upload-artifact@v4
+        with:
+          name: resume-pdf-${{ matrix.theme }}
+          path: resume-${{ matrix.theme }}.pdf
+          if-no-files-found: error
+          retention-days: 7
+
+  build-rendercv-pdfs:
+    name: Build RenderCV PDFs
+    runs-on: ubuntu-latest
+    needs: post-validate
+    strategy:
+      matrix:
+        theme:
+          - engineeringclassic
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Download RenderCV YAML
+        uses: actions/download-artifact@v4
+        with:
+          name: rendercv-yaml
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+
+      - name: Build PDF (${{ matrix.theme }})
+        run: bash scripts/build-rendercv-pdf.sh rendercv.yaml . "${{ matrix.theme }}"
+
+      - name: Upload PDF
+        uses: actions/upload-artifact@v4
+        with:
+          name: rendercv-pdf-${{ matrix.theme }}
+          path: "*_CV.pdf"
+          if-no-files-found: error
+          retention-days: 7
+
+  release:
+    name: Release Package
+    runs-on: ubuntu-latest
+    needs:
+      - build-jsonresume-pdfs
+      - build-rendercv-pdfs
+    if: startsWith(github.ref, 'refs/tags/')
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+
+      - name: Download RenderCV YAML
+        uses: actions/download-artifact@v4
+        with:
+          name: rendercv-yaml
+
+      - name: Download JSON Resume PDFs
+        uses: actions/download-artifact@v4
+        with:
+          pattern: resume-pdf-*
+          merge-multiple: true
+
+      - name: Download RenderCV PDFs
+        uses: actions/download-artifact@v4
+        with:
+          pattern: rendercv-pdf-*
+          merge-multiple: true
+
+      - name: Package Release
         run: |
-          zip -j resume-package-${{ github.ref_name }}.zip resume.json rendercv.yaml
+          VERSION="${GITHUB_REF_NAME}"
+          uvx --from yq yq -i ".build_version = \"${VERSION}\"" resume.json
+          uvx --from yq yq -i ".build_version = \"${VERSION}\"" rendercv.yaml
+          zip -j resume-package-${VERSION}.zip resume.json rendercv.yaml resume-*.pdf *_CV.pdf
 
       - name: Upload Release Artifact
-        if: startsWith(github.ref, 'refs/tags/')
         uses: actions/upload-artifact@v4
         with:
           name: resume-package-${{ github.ref_name }}
