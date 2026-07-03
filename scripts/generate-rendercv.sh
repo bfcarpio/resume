@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+INPUT="${1:-resume.json}"
+OUTPUT="${2:-rendercv.yaml}"
+
+if [ ! -f "$INPUT" ]; then
+  echo "❌ Input file '$INPUT' not found"
+  exit 1
+fi
+
+echo "Converting $INPUT → $OUTPUT"
+uvx jsonresume-to-rendercv -- "$INPUT" "$OUTPUT"
+echo "✅ Generated $OUTPUT"
