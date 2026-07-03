@@ -14,5 +14,11 @@ run = "scripts/check.sh"
 description = "Static fix files"
 run = "scripts/fix.sh"
 
+[tools]
+biome = "latest"
+tombi = "latest"
+shfmt = "latest"
+shellcheck = "latest"
+
 [settings]
 python.uv_venv_auto = true

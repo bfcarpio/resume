@@ -1,0 +1,24 @@
+name: Lint Pipeline
+
+on:
+  push:
+    paths-ignore:
+      - README.md
+      - resume.json
+
+jobs:
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup mise
+        uses: jdx/mise-action@v2
+      - name: Install tools
+        run: mise install
+
+      - name: Run checks
+        run: mise run check
