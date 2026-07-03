@@ -10,6 +10,12 @@ if [ ! -f "$RESUME_FILE" ]; then
   exit 1
 fi
 
+if ! command -v npx >/dev/null 2>&1
+then
+    echo "npx could not be found"
+    exit 1
+fi
+
 echo "Fetching JSON Resume schema..."
 curl -sL "$SCHEMA_URL" -o "$SCHEMA_FILE"
 
