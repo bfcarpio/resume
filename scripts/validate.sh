@@ -6,14 +6,13 @@ SCHEMA_FILE="/tmp/resume-schema.json"
 RESUME_FILE="${1:-resume.json}"
 
 if [ ! -f "$RESUME_FILE" ]; then
-  echo "❌ Resume file '$RESUME_FILE' not found"
-  exit 1
+	echo "❌ Resume file '$RESUME_FILE' not found"
+	exit 1
 fi
 
-if ! command -v npx >/dev/null 2>&1
-then
-    echo "npx could not be found"
-    exit 1
+if ! command -v npx >/dev/null 2>&1; then
+	echo "npx could not be found"
+	exit 1
 fi
 
 echo "Fetching JSON Resume schema..."
