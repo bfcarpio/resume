@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -euo pipefail
 biome check
 tombi format --check
 shfmt -d scripts/*.sh
