@@ -16,5 +16,5 @@ then
 fi
 
 echo "Converting $INPUT → $OUTPUT"
-uvx jsonresume-to-rendercv -- "$INPUT" "$OUTPUT"
+uvx --from jsonresume-to-rendercv jsonresume_to_rendercv "$INPUT" "$OUTPUT"
 echo "✅ Generated $OUTPUT"
