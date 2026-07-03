@@ -13,3 +13,7 @@ run = "scripts/check.sh"
 [tasks.fix]
 description = "Static fix files"
 run = "scripts/fix.sh"
+
+[settings]
+python.uv_venv_auto = true
+
