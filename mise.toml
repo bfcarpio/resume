@@ -5,3 +5,11 @@ run = "scripts/validate.sh"
 [tasks.clean]
 description = "Clean generated files"
 run = "scripts/clean.sh"
+
+[tasks.check]
+description = "Static check files"
+run = "scripts/check.sh"
+
+[tasks.fix]
+description = "Static fix files"
+run = "scripts/fix.sh"
