@@ -3,18 +3,14 @@ set -euo pipefail
 
 INPUT="${1:-resume.json}"
 OUTPUT="${2:-resume.pdf}"
-THEME="${3:-flat}"
+THEME="${3:-even}"
 
 if [ ! -f "$INPUT" ]; then
 	echo "❌ Input file '$INPUT' not found"
 	exit 1
 fi
 
-if ! command -v npx >/dev/null 2>&1; then
-	echo "❌ npx could not be found"
-	exit 1
-fi
-
 echo "Building PDF from $INPUT → $OUTPUT (theme: $THEME)"
-npx -y resumed render "$INPUT" --theme "$THEME" --type pdf --output "$OUTPUT"
+npm install "jsonresume-theme-${THEME}"
+npx resumed render "$INPUT" --theme "jsonresume-theme-${THEME}" --type pdf --output "$OUTPUT"
 echo "✅ Generated $OUTPUT"

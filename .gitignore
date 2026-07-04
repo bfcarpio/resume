@@ -1,0 +1,8 @@
+# Generated artifacts
+rendercv.yaml
+rendercv_output/
+*.pdf
+
+# Node
+node_modules/
+output/
