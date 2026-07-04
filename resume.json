@@ -9,24 +9,19 @@
 		"summary": "Senior Software Engineer and software craftsman at Microsoft: an SRE-minded, Linux-native polyglot who led large-scale platform migrations, became the team's Kubernetes SME, and architected caching strategies that slashed calls to high-cost backend services by 90%, yielding ~$6M/year in savings. I build systems that self-heal and scale gracefully so people can rest easy.",
 		"profiles": [
 			{
-				"network": "GitHub",
+				"network": "github",
 				"username": "bfcarpio",
 				"url": "https://github.com/bfcarpio"
 			},
 			{
-				"network": "GitLab",
+				"network": "gitlab",
 				"username": "bfcarpio",
 				"url": "https://gitlab.com/bfcarpio"
 			},
 			{
-				"network": "Sourcehut",
+				"network": "linkedin",
 				"username": "bfcarpio",
-				"url": "https://sr.ht/bfcarpio"
-			},
-			{
-				"network": "Codeberg",
-				"username": "bfcarpio",
-				"url": "https://codeberg.org/bfcarpio/"
+				"url": "https://www.linkedin.com/in/bfcarpio"
 			}
 		],
 		"location": {
