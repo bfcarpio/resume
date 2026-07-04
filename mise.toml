@@ -26,3 +26,32 @@ shellcheck = "latest"
 
 [settings]
 python.uv_venv_auto = true
+
+[tasks.build]
+description = "Full build: validate, generate YAML, build all PDFs"
+run = [
+	"mise run validate",
+	"mise run generate-rendercv",
+	"mise run build-jsonresume-pdfs",
+	"mise run build-rendercv-pdfs",
+]
+
+[tasks.generate-rendercv]
+description = "Generate RenderCV YAML from resume.json"
+run = "uvx --from jsonresume-to-rendercv jsonresume_to_rendercv resume.json rendercv.yaml"
+
+[tasks.build-jsonresume-pdfs]
+description = "Build JSON Resume PDFs (flat)"
+run = [
+	"scripts/build-jsonresume-pdf.sh resume.json resume-flat.pdf flat",
+]
+
+[tasks.build-rendercv-pdfs]
+description = "Build RenderCV PDFs (engineeringclassic)"
+run = "scripts/build-rendercv.sh resume.json resume-engineeringclassic.pdf engineeringclassic"
+[tasks.collect-pdfs]
+description = "Copy all generated PDFs into output/"
+run = [
+	"mkdir -p output",
+	"shopt -s nullglob; pdfs=(*.pdf); for f in \"${pdfs[@]}\"; do cp \"$f\" \"output/\"; echo \"📄 $f → output/\"; done",
+]
