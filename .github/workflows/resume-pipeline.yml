@@ -17,41 +17,20 @@ jobs:
       - name: Validate resume.json
         run: bash scripts/validate.sh
 
-  post-validate:
-    name: Gist & RenderCV YAML
+  update-gist:
+    name: Update Resume Gist
     runs-on: ubuntu-latest
     needs: validate
+    if: startsWith(github.ref, 'refs/tags/')
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
       - name: Update Resume Gist
-        if: startsWith(github.ref, 'refs/tags/')
         env:
           GH_TOKEN: ${{ secrets.TOKEN }}
         run: bash scripts/update-gist.sh
-
-      - name: Setup Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.12'
-
-      - name: Install uv
-        uses: astral-sh/setup-uv@v5
-        with:
-          enable-cache: true
-
-      - name: Generate RenderCV YAML
-        run: bash scripts/generate-rendercv.sh
-
-      - name: Upload RenderCV YAML
-        uses: actions/upload-artifact@v4
-        with:
-          name: rendercv-yaml
-          path: rendercv.yaml
-          if-no-files-found: error
-          retention-days: 7
 
   build-jsonresume-pdfs:
     name: Build JSON Resume PDFs
@@ -67,6 +46,9 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      - name: Install themes
+        run: npm install jsonresume-theme-flat jsonresume-theme-developer-mono
+
       - name: Build PDF (${{ matrix.theme }})
         run: bash scripts/build-jsonresume-pdf.sh resume.json "resume-${{ matrix.theme }}.pdf" "${{ matrix.theme }}"
 
@@ -81,7 +63,7 @@ jobs:
   build-rendercv-pdfs:
     name: Build RenderCV PDFs
     runs-on: ubuntu-latest
-    needs: post-validate
+    needs: validate
     strategy:
       matrix:
         theme:
@@ -90,11 +72,6 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-
-      - name: Download RenderCV YAML
-        uses: actions/download-artifact@v4
-        with:
-          name: rendercv-yaml
 
       - name: Setup Python
         uses: actions/setup-python@v5
@@ -107,13 +84,13 @@ jobs:
           enable-cache: true
 
       - name: Build PDF (${{ matrix.theme }})
-        run: bash scripts/build-rendercv-pdf.sh rendercv.yaml . "${{ matrix.theme }}"
+        run: bash scripts/build-rendercv.sh resume.json "resume-${{ matrix.theme }}.pdf" "${{ matrix.theme }}"
 
       - name: Upload PDF
         uses: actions/upload-artifact@v4
         with:
           name: rendercv-pdf-${{ matrix.theme }}
-          path: "*_CV.pdf"
+          path: resume-${{ matrix.theme }}.pdf
           if-no-files-found: error
           retention-days: 7
 
@@ -141,11 +118,6 @@ jobs:
         with:
           enable-cache: true
 
-      - name: Download RenderCV YAML
-        uses: actions/download-artifact@v4
-        with:
-          name: rendercv-yaml
-
       - name: Download JSON Resume PDFs
         uses: actions/download-artifact@v4
         with:
@@ -158,12 +130,14 @@ jobs:
           pattern: rendercv-pdf-*
           merge-multiple: true
 
+      - name: Generate RenderCV YAML
+        run: uvx --from jsonresume-to-rendercv jsonresume_to_rendercv resume.json rendercv.yaml
+
       - name: Package Release
         run: |
           VERSION="${GITHUB_REF_NAME}"
           uvx --from yq yq -i ".build_version = \"${VERSION}\"" resume.json
-          uvx --from yq yq -i ".build_version = \"${VERSION}\"" rendercv.yaml
-          zip -j resume-package-${VERSION}.zip resume.json rendercv.yaml resume-*.pdf *_CV.pdf
+          zip -j resume-package-${VERSION}.zip resume.json rendercv.yaml resume-*.pdf
 
       - name: Upload Release Artifact
         uses: actions/upload-artifact@v4
