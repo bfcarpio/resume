@@ -13,7 +13,7 @@ fi
 
 # Generated PDFs & HTML
 shopt -s nullglob
-pdfs=( *.pdf *.html)
+pdfs=(*.pdf *.html)
 if [ ${#pdfs[@]} -gt 0 ]; then
 	rm "${pdfs[@]}"
 	echo "✅ Removed ${#pdfs[@]} PDF(s) or HTML(s): ${pdfs[*]}"
