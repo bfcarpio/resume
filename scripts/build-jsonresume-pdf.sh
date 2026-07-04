@@ -3,7 +3,8 @@ set -euo pipefail
 
 INPUT="${1:-resume.json}"
 OUTPUT="${2:-resume.pdf}"
-THEME="${3:-even}"
+# THEME="${3:-even}"
+THEME="${3:-minyma}"
 
 if [ ! -f "$INPUT" ]; then
 	echo "❌ Input file '$INPUT' not found"

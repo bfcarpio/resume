@@ -36,11 +36,6 @@ jobs:
     name: Build JSON Resume PDFs
     runs-on: ubuntu-latest
     needs: validate
-    strategy:
-      matrix:
-        theme:
-          - flat
-          - developer-mono
 
     steps:
       - name: Checkout code
@@ -49,14 +44,18 @@ jobs:
       - name: Install themes
         run: npm install jsonresume-theme-flat jsonresume-theme-developer-mono
 
-      - name: Build PDF (${{ matrix.theme }})
-        run: bash scripts/build-jsonresume-pdf.sh resume.json "resume-${{ matrix.theme }}.pdf" "${{ matrix.theme }}"
+      - name: Build PDFs
+        run: |
+          for theme in flat developer-mono; do
+            bash scripts/build-jsonresume-pdf.sh resume.json "resume-${theme}.pdf" "${theme}"
+            echo "Uploading resume-pdf-${theme}"
+          done
 
-      - name: Upload PDF
+      - name: Upload PDFs
         uses: actions/upload-artifact@v4
         with:
-          name: resume-pdf-${{ matrix.theme }}
-          path: resume-${{ matrix.theme }}.pdf
+          name: resume-pdfs
+          path: resume-*.pdf
           if-no-files-found: error
           retention-days: 7
 
@@ -64,10 +63,6 @@ jobs:
     name: Build RenderCV PDFs
     runs-on: ubuntu-latest
     needs: validate
-    strategy:
-      matrix:
-        theme:
-          - engineeringclassic
 
     steps:
       - name: Checkout code
@@ -76,21 +71,25 @@ jobs:
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.12'
+          python-version: "3.12"
 
       - name: Install uv
         uses: astral-sh/setup-uv@v5
         with:
           enable-cache: true
 
-      - name: Build PDF (${{ matrix.theme }})
-        run: bash scripts/build-rendercv.sh resume.json "resume-${{ matrix.theme }}.pdf" "${{ matrix.theme }}"
+      - name: Build PDFs
+        run: |
+          for theme in engineeringclassic harvard; do
+            bash scripts/build-rendercv.sh resume.json "resume-${theme}.pdf" "${theme}"
+            echo "Uploading rendercv-pdf-${theme}"
+          done
 
-      - name: Upload PDF
+      - name: Upload PDFs
         uses: actions/upload-artifact@v4
         with:
-          name: rendercv-pdf-${{ matrix.theme }}
-          path: resume-${{ matrix.theme }}.pdf
+          name: rendercv-pdfs
+          path: resume-*.pdf
           if-no-files-found: error
           retention-days: 7
 
@@ -111,7 +110,7 @@ jobs:
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.12'
+          python-version: "3.12"
 
       - name: Install uv
         uses: astral-sh/setup-uv@v5
@@ -121,14 +120,12 @@ jobs:
       - name: Download JSON Resume PDFs
         uses: actions/download-artifact@v4
         with:
-          pattern: resume-pdf-*
-          merge-multiple: true
+          name: resume-pdfs
 
       - name: Download RenderCV PDFs
         uses: actions/download-artifact@v4
         with:
-          pattern: rendercv-pdf-*
-          merge-multiple: true
+          name: rendercv-pdfs
 
       - name: Generate RenderCV YAML
         run: uvx --from jsonresume-to-rendercv jsonresume_to_rendercv resume.json rendercv.yaml
