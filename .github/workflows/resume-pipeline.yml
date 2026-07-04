@@ -120,6 +120,7 @@ jobs:
           enable-cache: true
 
       - name: Download JSON Resume PDFs
+        if: false
         uses: actions/download-artifact@v8
         with:
           name: resume-pdfs
