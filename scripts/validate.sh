@@ -1,8 +1,6 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-SCHEMA_URL="https://raw.githubusercontent.com/jsonresume/resume-schema/master/schema.json"
-SCHEMA_FILE="/tmp/resume-schema.json"
 RESUME_FILE="${1:-resume.json}"
 
 if [ ! -f "$RESUME_FILE" ]; then

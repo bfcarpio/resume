@@ -23,9 +23,9 @@ fi
 
 # Node stuff
 nd=("package*.json")
-for item in ${nd[@]}; do
-	if [ -f $item ]; then
-		rm $item
+for item in "${nd[@]}"; do
+	if [ -f "$item" ]; then
+		rm "$item"
 		echo "✅ Removed $item"
 	fi
 done
