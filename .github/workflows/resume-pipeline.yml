@@ -120,12 +120,12 @@ jobs:
           enable-cache: true
 
       - name: Download JSON Resume PDFs
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
         with:
           name: resume-pdfs
 
       - name: Download RenderCV PDFs
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
         with:
           name: rendercv-pdfs
 
@@ -139,7 +139,7 @@ jobs:
           zip -j resume-package-${VERSION}.zip resume.json rendercv.yaml resume-*.pdf
 
       - name: Upload Release Artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: resume-package-${{ github.ref_name }}
           path: resume-package-${{ github.ref_name }}.zip
