@@ -33,6 +33,7 @@ jobs:
         run: bash scripts/update-gist.sh
 
   build-jsonresume-pdfs:
+    if: false
     name: Build JSON Resume PDFs
     runs-on: ubuntu-latest
     needs: validate
