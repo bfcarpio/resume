@@ -391,8 +391,10 @@
 		},
 		{
 			"name": "exNoops: Elixir API wrapper for Github's Noops",
-			"description": "*simple API wrapper for Github’s Noops (read: toy APIs). Developers can quickly and easily import this package; use idiomatic function calls to query the API, and get back native Elixir objects with minimal processing. *100% native Elixir, minimal dependencies, TDD w/ automated pipelines to compile, test, and deploy. *Fully documented with accurate example usage *My first released Elixir project",
-			"highlights": [],
+			"description": "Simple API wrapper for Github’s Noops (read: toy APIs). Developers can quickly and easily import this package; use idiomatic function calls to query the API, and get back native Elixir objects with minimal processing.",
+			"highlights": [
+				"100% native Elixir, minimal dependencies, TDD w/ automated pipelines to compile, test, and deploy."
+			],
 			"startDate": "2019-06-01",
 			"endDate": "2019-07-01",
 			"url": "https://hex.pm/packages/exnoops"
