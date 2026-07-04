@@ -15,10 +15,11 @@ if ! command -v npx >/dev/null 2>&1; then
 	exit 1
 fi
 
-echo "Fetching JSON Resume schema..."
-curl -sL "$SCHEMA_URL" -o "$SCHEMA_FILE"
+# echo "Fetching JSON Resume schema..."
+# curl -sL "$SCHEMA_URL" -o "$SCHEMA_FILE"
 
 echo "Validating $RESUME_FILE..."
-npx -y ajv-cli validate -s "$SCHEMA_FILE" -d "$RESUME_FILE" --strict=false 2>/dev/null
+# npx -y ajv-cli validate -s "$SCHEMA_FILE" -d "$RESUME_FILE" --strict=false 2>/dev/null
+npx resumed validate "$RESUME_FILE"
 
 echo "✅ $RESUME_FILE is valid"
