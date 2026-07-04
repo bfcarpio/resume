@@ -177,11 +177,6 @@
 			"keywords": []
 		},
 		{
-			"name": "Quality Management",
-			"level": "",
-			"keywords": []
-		},
-		{
 			"name": "AI Pair Programming / AI-Assisted Programming",
 			"level": "",
 			"keywords": []
@@ -217,21 +212,6 @@
 			"keywords": []
 		},
 		{
-			"name": "CICD",
-			"level": "",
-			"keywords": []
-		},
-		{
-			"name": "Serverless Framework",
-			"level": "",
-			"keywords": []
-		},
-		{
-			"name": "Communication",
-			"level": "",
-			"keywords": []
-		},
-		{
 			"name": "Bash",
 			"level": "",
 			"keywords": []
@@ -257,22 +237,7 @@
 			"keywords": []
 		},
 		{
-			"name": "Continuous Integration",
-			"level": "",
-			"keywords": []
-		},
-		{
-			"name": "Front-end Development",
-			"level": "",
-			"keywords": []
-		},
-		{
 			"name": "Analytical Skills",
-			"level": "",
-			"keywords": []
-		},
-		{
-			"name": "Web Design",
 			"level": "",
 			"keywords": []
 		},
@@ -312,11 +277,6 @@
 			"keywords": []
 		},
 		{
-			"name": "Vue.js",
-			"level": "",
-			"keywords": []
-		},
-		{
 			"name": "GIT",
 			"level": "",
 			"keywords": []
@@ -332,32 +292,12 @@
 			"keywords": []
 		},
 		{
-			"name": "Django",
-			"level": "",
-			"keywords": []
-		},
-		{
-			"name": "Flask",
-			"level": "",
-			"keywords": []
-		},
-		{
 			"name": "Microsoft Azure",
 			"level": "",
 			"keywords": []
 		},
 		{
-			"name": "MySQL",
-			"level": "",
-			"keywords": []
-		},
-		{
 			"name": "Docker",
-			"level": "",
-			"keywords": []
-		},
-		{
-			"name": "Teamwork",
 			"level": "",
 			"keywords": []
 		},
