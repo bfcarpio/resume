@@ -136,7 +136,6 @@ jobs:
       - name: Package Release
         run: |
           VERSION="${GITHUB_REF_NAME}"
-          uvx --from yq yq -i ".build_version = \"${VERSION}\"" resume.json
           zip -j resume-package-${VERSION}.zip resume.json rendercv.yaml resume-*.pdf
 
       - name: Upload Release Artifact
