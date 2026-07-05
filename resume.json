@@ -1,444 +1,475 @@
 {
-  "basics": {
-    "name": "Brendan Carpio",
-    "label": "Sr. SDE @ Microsoft | Kubernetes, Microservices, Platform Eng | Defensive software to sleep through the night",
-    "picture": "",
-    "email": "bfcarpio@gmail.com",
-    "website": "https://bfcarp.io",
-    "summary": "Senior Software Engineer and software craftsman at Microsoft: an SRE-minded, Linux-native polyglot who led large-scale platform migrations, became the team's Kubernetes SME, and architected caching strategies that slashed calls to high-cost backend services by 90%, yielding ~$6M/year in savings. I build systems that self-heal and scale gracefully so people can rest easy.",
-    "location": {
-      "postalCode": "98122",
-      "city": "Seattle",
-      "countryCode": "US",
-      "region": "WA"
-    },
-    "profiles": [
-      {
-        "network": "github",
-        "username": "bfcarpio",
-        "url": "https://github.com/bfcarpio"
-      },
-      {
-        "network": "gitlab",
-        "username": "bfcarpio",
-        "url": "https://gitlab.com/bfcarpio"
-      },
-      {
-        "network": "linkedin",
-        "username": "bfcarpio",
-        "url": "https://www.linkedin.com/in/bfcarpio"
-      }
-    ],
-    "phone": "+1 517-505-0397"
-  },
-  "work": [
-    {
-      "company": "Microsoft",
-      "position": "Senior Software Engineer",
-      "website": "https://microsoft.com",
-      "startDate": "2026-03-01",
-      "summary": "Technical lead for Azure Maps routing migration, caching architecture, and platform scaling across distributed scheduling services.  ➲ Drove >$6M/year in cost savings and reduced route API consumption by 97% by designing and implementing a distributed Redis + application-layer caching system. ➲ Led end-to-end migration of spatial data providers, increasing performance capacity by 100x while maintaining service health across 7+ staged rollouts. ➲ Iterated on distributed cache and spatial data provider code to reduce cache memory by 50%, pod memory by 82%, and increase throughput by 100% — eliminating OOM errors and lowering COGS. ➲ Solved QPS bottlenecks and throughput constraints by designing distributed rate-limiting and throttling systems across multi-pod AKS deployments. ➲ Built end-to-end observability for Redis health, cache efficiency, and Azure Maps usage using Grafana and Kusto/ADX. ➲ Prototyped LLM skills to automatically generate Grafana charts from internal Azure resource metrics and code repo logs. ➲ Led cross-team alignment across Maps, URS, SOA, Redis, and platform teams to unblock migration and scaling challenges",
-      "highlights": []
-    },
-    {
-      "company": "Microsoft",
-      "position": "Software Engineer II",
-      "website": "https://microsoft.com",
-      "startDate": "2021-09-01",
-      "summary": "Sole Kubernetes engineer and DevOps SME responsible for containerization, deployment, and platform delivery across scheduling services.  ➲ Served as team Kubernetes SME — maintained Helm charts, designed low/no-touch cluster scaling for stateful applications, and architected a multi-cluster orchestration service for dynamic K8s deployment with per-customer configuration. ➲ Improved AKS deployment reliability by building rollback diagnostic workflows that cut time-to-root-cause for failed deployments. ➲ Designed and automated a CVE patching pipeline that kept containers current without manual intervention, reducing security toil across all deployments. ➲ Drove upstream platform changes that improved performance and reliability for multiple dependent teams. ➲ Promoted Docker best practices across the team through brown bags on container internals and standardized hygiene guidelines. ➲ Presented intermediate Kubernetes concepts — auto-healing, monitoring, and scaling — to an audience of 100+ engineers. ➲ Wrote a Go microservice to surface disk usage metrics on Azure Stack Edge devices, polling a cluster partition every minute that ASE tooling ignores. This visibility prevents capacity-related outages that could impact service uptime. Chose Go over the .NET operator framework based on cross-team consensus and Microsoft's primary K8s operator ecosystem.",
-      "highlights": [],
-      "endDate": "2026-03-01"
-    },
-    {
-      "company": "Microsoft",
-      "position": "Software Engineer",
-      "website": "https://microsoft.com",
-      "startDate": "2020-08-01",
-      "summary": "Built deployment infrastructure and IoT container systems for Connected Store / Connected Spaces — a computer vision platform enabling retail businesses to track customer behavior and surface real-time worker alerts.  ➲ Designed the majority of K8s infrastructure for the product — Helm charts, deployment scripts, sidecars, and tooling evaluation — as one of a small group of Kubernetes-focused engineers on the team. ➲ Built Bash-based deployment automation from scratch for Azure Stack Edge, replacing manual processes across ~30 edge devices. ➲ Took full ownership of the Python-based IoT container, maintaining and evolving core functionality for the computer vision pipeline. ➲ Assisted other teams with Docker container design to ensure cross-service compatibility and runtime hygiene. ➲ Established the Kubernetes and Linux expertise that became the foundation for later platform engineering work across the team",
-      "highlights": [],
-      "endDate": "2021-09-01"
-    },
-    {
-      "company": "Humana",
-      "position": "DevOps + Microservice + Cloud Infrastrucure Software Development Extended Intern",
-      "website": "https://humana.com",
-      "startDate": "2019-08-01",
-      "summary": "➲ Developed a microservice using Node.js and Azure DevOps APIs to automate the download and upload of certificates between Google Cloud Platform's App Engine and Azure DevOps pipelines, reducing deployment time and manual intervention for CI/CD setup. ➲ Utilized the Serverless framework to package and deploy functions in a platform-agnostic manner, ensuring consistent tooling and ease of use regardless of cloud provider. ➲ Worked with Node.js, Azure DevOps, and Google Cloud Platform App Engine.",
-      "highlights": [],
-      "endDate": "2019-11-01"
-    },
-    {
-      "company": "Humana",
-      "position": "Full-Stack + DevOps Software Development Intern",
-      "website": "https://humana.com",
-      "startDate": "2019-05-01",
-      "summary": "➲ Developed a Project Estimate Web App that replaced mass emailed Excel spreadsheets, reducing errors and completion time by 50%. Connected to a Flask API hosted on Google Cloud Platform, the app provided a centralized infrastructure for project cost calculations with version tracking. I was primarily responsible for vue.js front-end development and configuring Azure Dev Ops pipelines.  ➲ Collaborated with an Agile: Scrum team, splitting focus between front-end and back-end halves. Ensured routine communication was maintained between the two halves to meet Service Level Agreements.  ➲ Organized and ran the first company intern Hackathon, showcasing leadership and organizational skills. Coordinated logistics such as food, judges, room, and prompts.",
-      "highlights": [],
-      "endDate": "2019-08-01"
-    },
-    {
-      "company": "Union Pacific Railroad",
-      "position": "Machine Learning + Java/Python Microservice Software Development Intern",
-      "website": "https://up.com",
-      "startDate": "2018-05-01",
-      "summary": "➲ Developed two APIs, one in Java with Spring Boot and one in Python with Django and spaCy, to streamline help ticket processing and routing. ➲ Worked closely with a partner to receive daily feedback and ensure timely completion of projects. ➲ Successfully implemented an API \"glue\" using Java to connect Python, Solr, and ColdFusion front-end, significantly improving user experience by grouping, classifying, and redirecting help tickets using machine learning algorithms.",
-      "highlights": [],
-      "endDate": "2018-08-01"
-    },
-    {
-      "company": "Michigan State University",
-      "position": "Full-stack Java Spring Software Development Intern",
-      "website": "https://msu.edu",
-      "startDate": "2017-02-01",
-      "summary": "➲ Collaborated with a development team to create and maintain full-stack web applications using Java with Spring Boot, jQuery, and Hibernate, ensuring timely completion of assigned \"stories\". ➲ Contributed to the development of the ProSAM Administrative Web Application, allowing for no-code editing of financial aid calculation variables with input validation and surfacing errors during batch processing on a user-friendly dashboard.",
-      "highlights": [],
-      "endDate": "2019-05-01"
-    }
-  ],
-  "education": [
-    {
-      "institution": "Michigan State University",
-      "area": "Computer Science",
-      "studyType": "Bachelor of Science",
-      "startDate": "2015-12-31",
-      "gpa": "3.98",
-      "courses": [],
-      "endDate": "2019-12-31"
-    }
-  ],
-  "skills": [
-    {
-      "name": "Code Refactoring",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Test-Driven Development",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Object-Oriented Programming (OOP)",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Data Extraction",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Web Scraping",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Node.js",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Redis",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "SOLID Design Principles",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Performance Tuning",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Application Architecture",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Quality Management",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "AI Pair Programming / AI-Assisted Programming",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Cross-team Collaboration",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Cloud Infrastructure",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "System Architecture",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Kubernetes",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Continuous Integration and Continuous Delivery (CI/CD)",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Linux",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "CICD",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Serverless Framework",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Communication",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Bash",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Azure Kubernetes Service (AKS)",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "TDD",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Pipelines",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Machine Learning",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Continuous Integration",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Web Applications",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Front-end Development",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Analytical Skills",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Web Design",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Agile Methodologies",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Agile Testing",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Test Automation",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Continuous Delivery",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Agile Environment",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Git",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Python",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "GIT",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Open Source Software",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Operating Systems",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Flask",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Microsoft Azure",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "MySQL",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Docker",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Teamwork",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Leadership",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Conflict Resolution",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Microservices",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Full-Stack Development",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Functional Programming",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Elixir",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Parallel Programming",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Single Page Applications",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "API Development",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Agile Application Development",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Agile Web Development",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Build Automation",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "DevOps",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Back-End Web Development",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Go (Programming Language)",
-      "level": "",
-      "keywords": []
-    }
-  ],
-  "languages": [
-    {
-      "language": "English",
-      "fluency": "Native or bilingual proficiency"
-    }
-  ],
-  "projects": [
-    {
-      "name": "muFind: 2019 Humanathon Winner",
-      "summary": "➲ Full-stack indoor navigation platform that solves the \"last 50 feet\" problem: corporate directories tell you which floor, but not where to walk once you're there. ➲ Google Maps–like experience for floor plans — search for a person or room, see a pin drop, and zoom into the exact location. Delivered as both a responsive web app and native mobile experience via Ionic. ➲ Stack: Go backend, Node.js API layer, MongoDB, GCP, Ionic (cross-platform mobile + web)",
-      "url": "https://github.com/bfcarpio/2019-Humanathon-Back"
-    },
-    {
-      "name": "Contributor - folz/math - Elixir math package",
-      "summary": "Open-source contributor to https://github.com/folz/math Merged PRs implementing Math.Enum.mode (statistical mode) and mod_inv/mod_inv! (modular inverse) into a widely-used Elixir math library",
-      "url": "https://github.com/folz/math"
-    },
-    {
-      "name": "Contributor — recipe-scrapers",
-      "summary": "30 merged PRs adding new recipe scrapers, fixing time parsing bugs, and improving code quality (isort, Black, type safety). Made PluginInterface abstract to enforce cleaner plugin architecture across the codebase.",
-      "url": "https://github.com/hhursev/recipe-scrapers"
-    },
-    {
-      "name": "Contributor - apdunston/random_words - Elixir random words package",
-      "summary": "Started by adding docs, doctests, and typespecs; ended up refactoring the core implementation to fix failing tests and dialyzer errors. Achieved a 100-500x performance improvement on words/1 (200 words: ~0.2s → <0.001s).",
-      "url": "https://github.com/apdunston/random_words"
-    }
-  ]
+	"basics": {
+		"name": "Brendan Carpio",
+		"label": "Sr. SDE @ Microsoft | Kubernetes, Microservices, Platform Eng | Defensive software to sleep through the night",
+		"picture": "",
+		"email": "bfcarpio@gmail.com",
+		"url": "https://bfcarp.io",
+		"summary": "Senior Software Engineer and software craftsman at Microsoft: an SRE-minded, Linux-native polyglot who led large-scale platform migrations, became the team's Kubernetes SME, and architected caching strategies that slashed calls to high-cost backend services by 90%, yielding ~$6M/year in savings. I build systems that self-heal and scale gracefully so people can rest easy.",
+		"location": {
+			"postalCode": "98122",
+			"city": "Seattle",
+			"countryCode": "US",
+			"region": "WA"
+		},
+		"profiles": [
+			{
+				"network": "github",
+				"username": "bfcarpio",
+				"url": "https://github.com/bfcarpio"
+			},
+			{
+				"network": "gitlab",
+				"username": "bfcarpio",
+				"url": "https://gitlab.com/bfcarpio"
+			},
+			{
+				"network": "linkedin",
+				"username": "bfcarpio",
+				"url": "https://www.linkedin.com/in/bfcarpio"
+			}
+		],
+		"phone": "+1 517-505-0397"
+	},
+	"work": [
+		{
+			"name": "Microsoft",
+			"position": "Senior Software Engineer",
+			"website": "https://microsoft.com",
+			"startDate": "2026-03-01",
+			"summary": "Technical lead for Azure Maps routing migration, caching architecture, and platform scaling across distributed scheduling services.",
+			"highlights": [
+				"Drove >$6M/year in cost savings and reduced route API consumption by 97% by designing and implementing a distributed Redis + application-layer caching system.",
+				"Led end-to-end migration of spatial data providers, increasing performance capacity by 100x while maintaining service health across 7+ staged rollouts.",
+				"Iterated on distributed cache and spatial data provider code to reduce cache memory by 50%, pod memory by 82%, and increase throughput by 100% — eliminating OOM errors and lowering COGS.",
+				"Solved QPS bottlenecks and throughput constraints by designing distributed rate-limiting and throttling systems across multi-pod AKS deployments.",
+				"Built end-to-end observability for Redis health, cache efficiency, and Azure Maps usage using Grafana and Kusto/ADX.",
+				"Prototyped LLM skills to automatically generate Grafana charts from internal Azure resource metrics and code repo logs.",
+				"Led cross-team alignment across Maps, URS, SOA, Redis, and platform teams to unblock migration and scaling challenges"
+			]
+		},
+		{
+			"name": "Microsoft",
+			"position": "Software Engineer II",
+			"website": "https://microsoft.com",
+			"startDate": "2021-09-01",
+			"summary": "Sole Kubernetes engineer and DevOps SME responsible for containerization, deployment, and platform delivery across scheduling services.",
+			"highlights": [
+				"Served as team Kubernetes SME — maintained Helm charts, designed low/no-touch cluster scaling for stateful applications, and architected a multi-cluster orchestration service for dynamic K8s deployment with per-customer configuration.",
+				"Contributed upstream platform API enhacements for ergonimics and performance",
+				"Promoted Docker and Kubernetes best practices across the team through brown bags with 100+ engineers on container tooling, auto-healing, and scaling.",
+				"Wrote a Go microservice to surface disk usage metrics on Azure Stack Edge devices preventing capacity-related outages."
+			],
+			"endDate": "2026-03-01"
+		},
+		{
+			"name": "Microsoft",
+			"position": "Software Engineer",
+			"website": "https://microsoft.com",
+			"startDate": "2020-08-01",
+			"summary": "Built deployment infrastructure and IoT container systems for Connected Store / Connected Spaces — a computer vision platform enabling retail businesses to track customer behavior and surface real-time worker alerts.",
+			"highlights": [
+				"Designed the majority of K8s infrastructure for the product — Helm charts, deployment scripts, sidecars, and tooling evaluation — as one of a small group of Kubernetes-focused engineers on the team.",
+				"Built Bash-based deployment automation from scratch for Azure Stack Edge, replacing manual processes across ~30 edge devices.",
+				"Took full ownership of the Python-based IoT container, maintaining and evolving core functionality for the computer vision pipeline.",
+				"Assisted other teams with Docker container design to ensure cross-service compatibility and runtime hygiene.",
+				"Established the Kubernetes and Linux expertise that became the foundation for later platform engineering work across the team."
+			],
+			"endDate": "2021-09-01"
+		},
+		{
+			"name": "Humana",
+			"position": "DevOps + Microservice + Cloud Infrastrucure Software Development Extended Intern",
+			"website": "https://humana.com",
+			"startDate": "2019-08-01",
+			"summary": "Developed a microservice using Node.js and Azure DevOps APIs to automate the download and upload of certificates between Google Cloud Platform's App Engine and Azure DevOps pipelines, reducing deployment time and manual intervention for CI/CD setup.",
+			"highlights": [
+				"Utilized the Serverless framework to package and deploy functions in a platform-agnostic manner, ensuring consistent tooling and ease of use regardless of cloud provider.",
+				"Worked with Node.js, Azure DevOps, and Google Cloud Platform App Engine."
+			],
+			"endDate": "2019-11-01"
+		},
+		{
+			"name": "Humana",
+			"position": "Full-Stack + DevOps Software Development Intern",
+			"website": "https://humana.com",
+			"startDate": "2019-05-01",
+			"summary": "Developed a Project Estimate Web App that replaced mass emailed Excel spreadsheets, reducing errors and completion time by 50%. Connected to a Flask API hosted on Google Cloud Platform, the app provided a centralized infrastructure for project cost calculations with version tracking. I was primarily responsible for vue.js front-end development and configuring Azure Dev Ops pipelines.",
+			"highlights": [
+				"Collaborated with an Agile: Scrum team, splitting focus between front-end and back-end halves. Ensured routine communication was maintained between the two halves to meet Service Level Agreements.",
+				"Organized and ran the first name intern Hackathon, showcasing leadership and organizational skills. Coordinated logistics such as food, judges, room, and prompts."
+			],
+			"endDate": "2019-08-01"
+		},
+		{
+			"name": "Union Pacific Railroad",
+			"position": "Machine Learning + Java/Python Microservice Software Development Intern",
+			"website": "https://up.com",
+			"startDate": "2018-05-01",
+			"summary": "",
+			"highlights": [
+				"Developed two APIs, one in Java with Spring Boot and one in Python with Django and spaCy, to streamline help ticket processing and routing.",
+				"Worked closely with a partner to receive daily feedback and ensure timely completion of projects.",
+				"Successfully implemented an API \"glue\" using Java to connect Python, Solr, and ColdFusion front-end, significantly improving user experience by grouping, classifying, and redirecting help tickets using machine learning algorithms."
+			],
+			"endDate": "2018-08-01"
+		},
+		{
+			"name": "Michigan State University",
+			"position": "Full-stack Java Spring Software Development Intern",
+			"website": "https://msu.edu",
+			"startDate": "2017-02-01",
+			"summary": "",
+			"highlights": [
+				"Collaborated with a development team to create and maintain full-stack web applications using Java with Spring Boot, jQuery, and Hibernate, ensuring timely completion of assigned \"stories\".",
+				"Contributed to the development of the ProSAM Administrative Web Application, allowing for no-code editing of financial aid calculation variables with input validation and surfacing errors during batch processing on a user-friendly dashboard."
+			],
+			"endDate": "2019-05-01"
+		}
+	],
+	"education": [
+		{
+			"institution": "Michigan State University",
+			"area": "Computer Science",
+			"studyType": "Bachelor of Science",
+			"startDate": "2016-08-31",
+			"gpa": "3.98",
+			"courses": [],
+			"endDate": "2020-06-01"
+		}
+	],
+	"skills": [
+		{
+			"name": "Code Refactoring",
+			"level": "",
+			"keywords": []
+		},
+		{
+			"name": "Test-Driven Development",
+			"level": "",
+			"keywords": []
+		},
+		{
+			"name": "Object-Oriented Programming (OOP)",
+			"level": "",
+			"keywords": []
+		},
+		{
+			"name": "Data Extraction",
+			"level": "",
+			"keywords": []
+		},
+		{
+			"name": "Web Scraping",
+			"level": "",
+			"keywords": []
+		},
+		{
+			"name": "Node.js",
+			"level": "",
+			"keywords": []
+		},
+		{
+			"name": "Redis",
+			"level": "",
+			"keywords": []
+		},
+		{
+			"name": "SOLID Design Principles",
+			"level": "",
+			"keywords": []
+		},
+		{
+			"name": "Performance Tuning",
+			"level": "",
+			"keywords": []
+		},
+		{
+			"name": "Application Architecture",
+			"level": "",
+			"keywords": []
+		},
+		{
+			"name": "Quality Management",
+			"level": "",
+			"keywords": []
+		},
+		{
+			"name": "AI Pair Programming / AI-Assisted Programming",
+			"level": "",
+			"keywords": []
+		},
+		{
+			"name": "Cross-team Collaboration",
+			"level": "",
+			"keywords": []
+		},
+		{
+			"name": "Cloud Infrastructure",
+			"level": "",
+			"keywords": []
+		},
+		{
+			"name": "System Architecture",
+			"level": "",
+			"keywords": []
+		},
+		{
+			"name": "Kubernetes",
+			"level": "",
+			"keywords": []
+		},
+		{
+			"name": "Continuous Integration and Continuous Delivery (CI/CD)",
+			"level": "",
+			"keywords": []
+		},
+		{
+			"name": "Linux",
+			"level": "",
+			"keywords": []
+		},
+		{
+			"name": "CICD",
+			"level": "",
+			"keywords": []
+		},
+		{
+			"name": "Serverless Framework",
+			"level": "",
+			"keywords": []
+		},
+		{
+			"name": "Communication",
+			"level": "",
+			"keywords": []
+		},
+		{
+			"name": "Bash",
+			"level": "",
+			"keywords": []
+		},
+		{
+			"name": "Azure Kubernetes Service (AKS)",
+			"level": "",
+			"keywords": []
+		},
+		{
+			"name": "TDD",
+			"level": "",
+			"keywords": []
+		},
+		{
+			"name": "Pipelines",
+			"level": "",
+			"keywords": []
+		},
+		{
+			"name": "Machine Learning",
+			"level": "",
+			"keywords": []
+		},
+		{
+			"name": "Continuous Integration",
+			"level": "",
+			"keywords": []
+		},
+		{
+			"name": "Web Applications",
+			"level": "",
+			"keywords": []
+		},
+		{
+			"name": "Front-end Development",
+			"level": "",
+			"keywords": []
+		},
+		{
+			"name": "Analytical Skills",
+			"level": "",
+			"keywords": []
+		},
+		{
+			"name": "Web Design",
+			"level": "",
+			"keywords": []
+		},
+		{
+			"name": "Agile Methodologies",
+			"level": "",
+			"keywords": []
+		},
+		{
+			"name": "Agile Testing",
+			"level": "",
+			"keywords": []
+		},
+		{
+			"name": "Test Automation",
+			"level": "",
+			"keywords": []
+		},
+		{
+			"name": "Continuous Delivery",
+			"level": "",
+			"keywords": []
+		},
+		{
+			"name": "Agile Environment",
+			"level": "",
+			"keywords": []
+		},
+		{
+			"name": "Git",
+			"level": "",
+			"keywords": []
+		},
+		{
+			"name": "Python",
+			"level": "",
+			"keywords": []
+		},
+		{
+			"name": "GIT",
+			"level": "",
+			"keywords": []
+		},
+		{
+			"name": "Open Source Software",
+			"level": "",
+			"keywords": []
+		},
+		{
+			"name": "Operating Systems",
+			"level": "",
+			"keywords": []
+		},
+		{
+			"name": "Flask",
+			"level": "",
+			"keywords": []
+		},
+		{
+			"name": "Microsoft Azure",
+			"level": "",
+			"keywords": []
+		},
+		{
+			"name": "MySQL",
+			"level": "",
+			"keywords": []
+		},
+		{
+			"name": "Docker",
+			"level": "",
+			"keywords": []
+		},
+		{
+			"name": "Teamwork",
+			"level": "",
+			"keywords": []
+		},
+		{
+			"name": "Leadership",
+			"level": "",
+			"keywords": []
+		},
+		{
+			"name": "Conflict Resolution",
+			"level": "",
+			"keywords": []
+		},
+		{
+			"name": "Microservices",
+			"level": "",
+			"keywords": []
+		},
+		{
+			"name": "Full-Stack Development",
+			"level": "",
+			"keywords": []
+		},
+		{
+			"name": "Functional Programming",
+			"level": "",
+			"keywords": []
+		},
+		{
+			"name": "Elixir",
+			"level": "",
+			"keywords": []
+		},
+		{
+			"name": "Parallel Programming",
+			"level": "",
+			"keywords": []
+		},
+		{
+			"name": "Single Page Applications",
+			"level": "",
+			"keywords": []
+		},
+		{
+			"name": "API Development",
+			"level": "",
+			"keywords": []
+		},
+		{
+			"name": "Agile Application Development",
+			"level": "",
+			"keywords": []
+		},
+		{
+			"name": "Agile Web Development",
+			"level": "",
+			"keywords": []
+		},
+		{
+			"name": "Build Automation",
+			"level": "",
+			"keywords": []
+		},
+		{
+			"name": "DevOps",
+			"level": "",
+			"keywords": []
+		},
+		{
+			"name": "Back-End Web Development",
+			"level": "",
+			"keywords": []
+		},
+		{
+			"name": "Go (Programming Language)",
+			"level": "",
+			"keywords": []
+		},
+		{
+			"name": "Flux",
+			"level": "",
+			"keywords": []
+		}
+	],
+	"projects": [
+		{
+			"name": "muFind: 2019 Humanathon Winner",
+			"summary": "Full-stack indoor navigation platform that solves the \"last 50 feet\" problem: corporate directories tell you which floor, but not where to walk once you're there. Google Maps–like experience for floor plans — search for a person or room, see a pin drop, and zoom into the exact location. Delivered as both a responsive web app and native mobile experience via Ionic. Stack: Go backend, Node.js API layer, MongoDB, GCP, Ionic (cross-platform mobile + web)",
+			"url": "https://github.com/bfcarpio/2019-Humanathon-Back"
+		},
+		{
+			"name": "Contributor - folz/math - Elixir math package",
+			"summary": "Open-source contributor to https://github.com/folz/math Merged PRs implementing Math.Enum.mode (statistical mode) and mod_inv/mod_inv! (modular inverse) into a widely-used Elixir math library",
+			"url": "https://github.com/folz/math"
+		},
+		{
+			"name": "Contributor - recipe-scrapers - Python recipe scraping package",
+			"summary": "30 merged PRs adding new recipe scrapers, fixing time parsing bugs, and improving code quality (isort, Black, type safety). Made PluginInterface abstract to enforce cleaner plugin architecture across the codebase.",
+			"url": "https://github.com/hhursev/recipe-scrapers"
+		},
+		{
+			"name": "Contributor - apdunston/random_words - Elixir random words package",
+			"summary": "Started by adding docs, doctests, and typespecs; ended up refactoring the core implementation to fix failing tests and dialyzer errors. Achieved a 100-500x performance improvement on words/1 (200 words: ~0.2s → <0.001s).",
+			"url": "https://github.com/apdunston/random_words"
+		}
+	]
 }
